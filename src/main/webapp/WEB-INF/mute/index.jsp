@@ -51,7 +51,7 @@
             while ((inputLine = in.readLine()) != null) {
                 content.append(inputLine);
             }
-
+   
             // Parse the JSON response
             String token = content.toString();
             // Output the token to the JSP page
