@@ -1,96 +1,55 @@
+<%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.security.SecureRandom" %>
+<%@ page import="java.math.BigInteger" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<style>
-@font-face {
-	font-family: 'KOTRAHOPE';
-	src:
-		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2')
-		format('woff2');
-	font-weight: 30;
-	font-style: normal;
-	font-color: #002EA5;
-	text-align: 'center';
-}
+  pageEncoding="UTF-8"%>
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="resources/css/login.css">
+<title>MU:TE</title>
+</head>
 
-* {
-	font-family: 'KOTRAHOPE';
-}
-
-div {
-	text-align: center;
-}
-
-h1 {
-	font-size: 64px;
-	margin: 0;
-}
-
-.link {
-	font-size: 50px;
-	text-decoration: none;
-	color: #000000;
-}
-
-#id_login {
-	position: relative;
-}
-
-.kakao-link {
-	position: absolute;
-	top: 25px;
-	right: 750px;
-}
-
-.naver-link {
-	position: absolute;
-	top: 190px;
-	right: 750px;
-}
-
-#kakao {
-	position: absolute;
-	right: 470px; /* Adjust this value as needed */
-}
-
-#naver {
-	position: absolute;
-	right: 475px;
-	top: 170px /* Adjust this value as needed */
-}
-
-#logo {
-	margin: 0;
-}
-</style>
 <script>
-	function clickKakaoLogin() {
-		var clientId = '572b64114f9b12ed34721377c274c862'; // 앱 키 중 JavaScript 키
-		var redirectUri = 'http://localhost:9012/test/main'; // 등록한 Redirect URI
-		window.location.href = 'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id='
-				+ clientId + '&redirect_uri=' + redirectUri;
-	}
+
+
+function loginToSpotify() {
+    var client_id = '61731dfa4f5a4f81a934c76fe09958d8';
+    var redirect_uri = 'http://localhost:9089/mute/main';
+
+    var scope = 'user-read-private user-read-email user-read-currently-playing playlist-read-private playlist-modify-private user-modify-playback-state';
+
+
+    var spotifyAuthURL = 'https://accounts.spotify.com/authorize?' +
+        'client_id=' + client_id +
+        '&redirect_uri=' + redirect_uri +
+        '&response_type=code' +
+        '&scope=' + encodeURIComponent(scope);
+
+    // Redirect the user to the Spotify authentication page
+    window.location.href = spotifyAuthURL;
+
+}
+
 </script>
-<nav>
-	<div>
-		<img id="logo" alt="logo" src="resources/img/logo.png" height="385"
-			width="484">
-		<!--로고 -->
-		<h1>간편로그인</h1>
-	</div>
 
-	<div id="id_login">
-		<p>
-			<a href="javascript:void(0);" onclick="clickKakaoLogin()"
-				class="link kakao-link">카카오로 시작하기</a><img id="kakao"
-				alt="kakao-logo" onclick="clickKakaoLogin()"
-				src="resources/img/btn_kakao.png" height="140" width="144">
-		</p>
+<body>
 
-		<p>
-			<a href="naverLogin.jsp" class="link naver-link">네이버로 시작하기</a><img
-				id="naver" alt="naver-logo" onclick="location.href='naverLogin'"
-				src="resources/img/btn_naver.png" height="120" width="124">
-		</p>
-	</div>
-
-</nav>
+	<nav>
+		<div>
+			<img id="logo" alt="logo" src="resources/images/mutelogo.png" height="385" width="385"><!--로고 -->
+			<h1>간편로그인</h1>
+			<br><br><br>
+<!-- 			<p><img id="spotify" alt="spotify-loginBtn" onclick="location.href='spotify.jsp'" src="resources/images/btn_spotify.png" height="130" width="450"></p>
+ -->			<!-- spotifyBtn 이미지 바꿔야 함. 뒷배경 없는 걸로...! -->
+			<img src="resources/images/btn_spotify.png" id="spotify-btn" type="button" onclick="loginToSpotify()">
+			<!-- 'location.href='spotifyLogin' -->
+			
+		</div>
+		
+		
+	
+	</nav>
+</body>
+</html>

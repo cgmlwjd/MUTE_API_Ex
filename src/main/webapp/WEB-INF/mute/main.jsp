@@ -5,74 +5,83 @@
 <head>
 <meta charset="UTF-8">
 <title>MU:TE</title>
-<style>
-@font-face {
-	font-family: 'KOTRAHOPE';
-	src:
-		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2')
-		format('woff2');
-	font-weight: 30;
-	font-style: normal;
-	font-color: #002EA5;
-	text-align: 'center';
-}
-* {
-	font-family: 'KOTRAHOPE';
-}
-.button{
-	background-color: #FFE2F8;
-	color: #002EA5;
-	border: none;
-	width: 331px;
-	height: 110px;
-	font-size:30px;
-	border-radius:30px;
-	box-shadow:0px 4px 4px 0px #CBCBCB;
-}
-#headline{
-	font-size:46px;
-}
-#login{
-	font-size:32px;
-	color: #002EA5;
-	text-decoration:none;
-}
-div{
-	text-align:center;
-}
-#logo {
-  position: absolute;
-  top: 20px; /* Adjust as needed */
-  left: 250px;
-}
-#bear {
-  margin-top: 10px; /* Adjust as needed */
-}
-#mypage {
-  position: absolute;
-  top: 20px; /* Adjust as needed */
-  right: 250px; /* Adjust as needed */
-}
-</style>
+<link rel="stylesheet" href="resources/css/main.css">
+
 </head>
-<body>
-	<nav>
-		<div>
-			<img id="logo" alt="logo" src="resources/img/logo.png" height="144" width="189"><!--로고 -->
-			<img id="bear" alt="bear" src="resources/img/main.png" height="360" width="360"><!-- 농담곰 사진 -->
-			<img id="mypage" alt="mypage" onclick="location.href='mypage.jsp'" src="resources/img/mypage.png" height="103" width="115"><!-- 마이페이지 곰 -->
-		</div>
-	
-		<div>
-			<h1 id="headline">내가 듣는 노래가 아이스크림이라면?</h1>
-			<button class="button" onclick="location.href='!!!!질문페이지 시작 !!!">눌러서 맛보기</button>
-			<br><br>
-			<a id="login" href="login">간편 로그인</a>
-		</div>
+	<body>
+		<table>
+			<tr class="top">
+				<td id="logo" rowspan="2"><img id="logoImg" alt="logo" src="resources/images/mutelogo.png" ></td>
+				<td id="mainGom" rowspan="3"><img id="bear" alt="bear" src="resources/images/origin_gom.png" ></td>
+				<td id="btnGom"><img id="mypage" alt="mypage" onclick="location.href='mypage'" src="resources/images/gom_button.png"></td>
+				<td id="login"><a id="loginText" href="login">간편 로그인</a></td>
+			</tr>
+			
+			<tr id="tr-2">
+				<!-- <td></td> -->
+				<!-- <td></td> -->
+				<td id="mypage"><a href="mypage" id="mypageFont">마이페이지</a></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<!-- <td></td> -->
+				<td></td>
+				<td></td>
+			</tr>
+			
+			<tr class="bottom">
+				<td id="title" colspan="4"><h1>내가 듣는 노래가 아이스크림이라면?</h1></td>
+				<!-- <td></td>
+				<td></td>
+				<td></td> -->
+			</tr>
+			
+			<tr class="bottom">
+				<td id="button" colspan="4"><button class="button" onclick="location.href='test1.jsp'">눌러서 맛보기</button></td>
+				<!-- <td></td>
+				<td></td>
+				<td></td> -->
+			</tr>
 		
-		<!-- 댓글 기능 구현 !!!! -->
-		<div>
-		</div>
-	</nav>
-</body>
+		
+		</table>
+	
+	
+	</body>
+
+
 </html>
+<!-- 
+<body>
+	<header>
+		<nav>
+			<table class="header-container">
+				<tr class="top">
+					<td rowspan="2" id="td-t"><img id="logo" alt="logo" src="resources/images/mutelogo.png" ></td>
+					<td id="td-m"><img id="mypage" alt="mypage" onclick="location.href='mypage'" src="resources/images/gom_button.png"></td>
+					<td rowspan="2" id="td-l"><a id="login" href="login">간편로그인</a></td>
+				</tr>
+				<tr>
+					<td id="td-m"><a href="mypage" id="btn-font">마이페이지</a></td>
+				</tr>
+			</table>
+		</nav>
+	</header>
+	
+	<table id="center">
+		<tr>
+			<td>
+				<img id="bear" alt="bear" src="resources/images/origin_gom.png" >
+			</td>
+		</tr>
+		<tr>
+			<td><h1 id="headline">내가 듣는 노래가 아이스크림이라면?</h1></td>
+		</tr>
+		<tr>
+			<td><button class="button" onclick="location.href='question1.jsp'">눌러서 맛보기</button></td>
+		</tr>
+	</table>
+</body>
+  -->
