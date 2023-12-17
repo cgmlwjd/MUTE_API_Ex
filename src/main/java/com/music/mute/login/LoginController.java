@@ -32,9 +32,9 @@ public class LoginController {
 	public String loginProcess(@RequestParam(required = false) String code, HttpSession session) {
 		String accessToken=null;
 		if (code != null) {
-			System.out.println("code>>>" + code);
+			//System.out.println("code>>>" + code);
 			 accessToken = spotifyService.requestAccessToken(code);
-			System.out.println("accessToken: " + accessToken);
+			//System.out.println("accessToken: " + accessToken);
 			session.setAttribute("accessToken", accessToken);
 		}else {
 			 accessToken = (String)session.getAttribute("accessToken");

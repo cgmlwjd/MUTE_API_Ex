@@ -14,7 +14,7 @@
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
-	<repositories> 
+	<repositories>
 		<repository>
 			<id>jitpack.id</id>
 			<url>https://jitpack.io</url>
@@ -256,11 +256,8 @@
 			<version>2.9.8</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
-		<!-- <dependency> 충돌남!!
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.8.5</version>
-		</dependency> -->
+		<!-- <dependency> 충돌남!! <groupId>com.google.code.gson</groupId> <artifactId>gson</artifactId> 
+			<version>2.8.5</version> </dependency> -->
 		<!-- Add MongoDB Lib -->
 
 		<!-- spring-core 5.3.8 추가하니 에러가 나지 않음 -->
@@ -269,12 +266,28 @@
 			<artifactId>spring-core</artifactId>
 			<version>5.3.8</version>
 		</dependency>
+
+		<!-- <dependency> <groupId>com.wrapper.spotify</groupId> <artifactId>spotify-web-api-java</artifactId> 
+			<version>4.6.0</version> 최신 버전으로 업데이트 가능 </dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/se.michaelthelin.spotify/spotify-web-api-java -->
+		<!-- <dependency> <groupId>se.michaelthelin.spotify</groupId> <artifactId>spotify-web-api-java</artifactId> 
+			<version>7.0.0</version> </dependency> -->
+
+		<!-- <dependency>
+			<groupId>com.wrapper.spotify</groupId>
+			<artifactId>spotify-web-api-java</artifactId>
+			<version>5.1.0</version> 또는 사용 가능한 최신 버전으로 수정
+		</dependency>
+ -->
 		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-mongodb</artifactId>
 			<version>3.3.1</version>
 		</dependency>
+
+
 
 
 		<!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync -->
@@ -303,6 +316,18 @@
 			<groupId>org.apache.httpcomponents.client5</groupId>
 			<artifactId>httpclient5</artifactId>
 			<version>5.2.1</version>
+		</dependency>
+
+		<!-- Spring Security OAuth2 -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-oauth2-client</artifactId>
+			<version>5.0.2.RELEASE</version> <!-- 버전은 프로젝트에 맞게 변경 -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-oauth2-jose</artifactId>
+			<version>5.0.2.RELEASE</version> <!-- 버전은 프로젝트에 맞게 변경 -->
 		</dependency>
 		<!--================================== -->
 

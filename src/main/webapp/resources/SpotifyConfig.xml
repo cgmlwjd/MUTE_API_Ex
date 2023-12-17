@@ -1,0 +1,12 @@
+<!-- src/main/resources/SpotifyConfig.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Spotify API 설정 -->
+    <bean id="spotifyApiConfig" class="com.spotify.SpotifyApiConfig">
+        <property name="apiUrl" value="https://api.spotify.com"/>
+        <property name="accessToken" value="YOUR_ACCESS_TOKEN"/>
+    </bean>
+
+</beans>
